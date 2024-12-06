@@ -16,7 +16,7 @@ function SignUp() {
     }
 
     return (
-        <div className="p-16">
+        <div className="p-16 border-2 border-solid border-neutral-300 rounded-lg ">
             <div className="flex flex-col justify-center w-96 gap-4">
                 <div className="flex flex-col text-center">
                     <h1 className="text-2xl font-semibold">
@@ -24,26 +24,27 @@ function SignUp() {
                     </h1>
                 </div>
                 <form className="space-y-4" onSubmit={handleSubmit(handleSignUp)}>
-                    <div className="space-y-2">
+                    <div className="space-y-4">
                         <Label>Digite o seu nome</Label>
                         <Input type="nome" {...register('nome')} />
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-4 ">
                         <Label>Digite o seu email</Label>
                         <Input type="email" {...register('email')} />
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-4">
                         <Label>Digite a sua senha</Label>
-                        <Input type="password" {...register('password')} />
+                        <Input placeholder="" type="password" {...register('password')} />
                     </div>
-
+                    <div className="flex flex-col gap-4 items-center">
                     <Button variant="link">
-                        <Link to="/sign-in">
-                            Acessar conta
-                        </Link>
-                    </Button>
-
-                    <Button disabled={!formValido} className="w-full" type="submit">Cadastrar</Button>
+                            <Link to="/sign-in">
+                                Acessar conta
+                            </Link>
+                        </Button>
+                    
+                    <Button className="w-1/2 bg-green-800 hover:bg-green-600" type="submit">Cadastrar</Button>
+                    </div>
                 </form>
             </div>
         </div>

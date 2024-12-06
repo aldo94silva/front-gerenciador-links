@@ -40,7 +40,7 @@ function SignIn() {
                         </Link>
                     </Button>
 
-                    <Button disabled={!formValido} className="w-full" type="submit">Logar</Button>
+                    <Button className="w-full bg-green-800 hover:bg-green-600" type="submit">Logar</Button>
                 </form>
             </div>
         </div>
